@@ -28,8 +28,8 @@ export default function AddItem({ refresh }) {
 
   return (
     <div>
-      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter user name" />
-      <button onClick={addItem}>Add User</button>
+      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter user name" className="border border-2 border-primary"/>
+      <button onClick={addItem} className="btn btn-primary mx-2">Add User</button>
     </div>
   );
 }

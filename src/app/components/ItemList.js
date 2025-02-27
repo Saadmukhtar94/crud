@@ -29,7 +29,7 @@ export default function ItemList({ refresh }) {
   return (
     <div className="mx-auto">
       <h2>Item List</h2>
-      <ul>
+      <ul className="d-flex flex-column gap-2">
         {items.map((item) => (
           <li key={item.id}>
             {editing === item.id ? (
@@ -43,8 +43,8 @@ export default function ItemList({ refresh }) {
             ) : (
               <>
                 {item.name}
-                <button onClick={() => setEditing(item.id)}>✏️ Edit</button>
-                <button onClick={() => deleteItem(item.id)}>❌ Delete</button> {/* ✅ Added Delete Button */}
+                <button onClick={() => setEditing(item.id)} className="btn btn-warning mx-2"> ✏️ Edit</button>
+                <button onClick={() => deleteItem(item.id)} className="btn btn-danger mx-2">❌ Delete</button> {/* ✅ Added Delete Button */}
               </>
             )}
           </li>
