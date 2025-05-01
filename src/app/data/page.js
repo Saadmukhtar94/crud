@@ -18,9 +18,9 @@ export default function Page() {
       {items.length === 0 ? (
         <p>No data found.</p>
       ) : (
-        <ul className="list-group">
+        <ul className="list-group mb-5">
           {items.map((item) => (
-            <li key={item.id} className="list-group-item">
+            <li key={item.id} className="list-group-item mb-3">
               {item.name}
             </li>
           ))}
